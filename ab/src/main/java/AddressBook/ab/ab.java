@@ -28,19 +28,17 @@ public class ab implements Runnable {
 
 	public void run() {
 		// TODO Auto-generated method stub
-		AddressService addressService = null;
+		AddressService addressService = null;		
 		try {
 			addressService = new AddressService();
-		} catch (SAXException e) {
+		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+			e1.printStackTrace();
+		} catch (ParserConfigurationException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
+		
 		String operate = null;
 		Scanner scan = new Scanner(System.in);
 		do {

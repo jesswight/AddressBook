@@ -22,9 +22,6 @@ public class AddressPersistenceTest extends TestCase {
 
 		} catch (IOException ex) {
 			System.out.println("Can¡¯t read the file:AddressBook.xml");
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

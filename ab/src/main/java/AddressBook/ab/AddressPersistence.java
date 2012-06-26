@@ -31,7 +31,7 @@ public class AddressPersistence {
 	static DocumentBuilder db;
 
 	// 构造函数
-	public AddressPersistence() throws SAXException, IOException,
+	public AddressPersistence() throws IOException,
 			ParserConfigurationException {
 		db = dbf.newDocumentBuilder();
 		// 通过文档通过文档构建器构建一个文档实例

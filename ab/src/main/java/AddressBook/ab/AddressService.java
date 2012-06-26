@@ -13,22 +13,8 @@ public class AddressService {
 
 	private static AddressPersistence addressPersistence;
 	private static final Object lockObj = new Object();
-	static {
-		try {
-			addressPersistence = new AddressPersistence();			
 
-		} catch (IOException ex) {
-			System.out.println("Can¡¯t read the file:AddressBook.xml");
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	public AddressService() throws SAXException, IOException, ParserConfigurationException {
+	public AddressService() throws IOException, ParserConfigurationException {
 		addressPersistence = new AddressPersistence();
 		
 	}
@@ -56,8 +42,7 @@ public class AddressService {
 		
 	}
 
-	@SuppressWarnings("unchecked")
-	public static List<Address> search(String byID,String text) throws SAXException, IOException {
+	public static List<Address> search(String byID,String text) throws IOException, SAXException {
 		List<Address> searchList= new ArrayList<Address>();
 		if(byID.equals("name")){
 			searchList=addressPersistence.searchbyName(text);
